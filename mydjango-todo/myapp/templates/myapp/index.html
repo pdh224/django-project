@@ -1,0 +1,13 @@
+{% extends './base.html' %}
+{% block content %}
+<h1>할일 목록</h1>
+<ul>
+{% for do in Todo_qs %}
+<li>
+    {{do.todo}} | {{do.name}}
+</li>
+{% endfor %}
+</ul>
+<a href="{% url 'todo_create' %}" >할일 등록하기</a>
+
+{% endblock %}
