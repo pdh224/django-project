@@ -1,13 +1,23 @@
 {% extends './base.html' %}
 {% block content %}
 <h1>할일 목록</h1>
-<ul>
+
+<ul class="list-group">
 {% for do in Todo_qs %}
-<li>
-    {{do.todo}} | {{do.name}}
-</li>
+<form method="post" action="/myapp/delete/{{do.id}}">
+    {% csrf_token %}
+    <div class="vstack gap-2 col-md-5 mx-auto">
+        <div class="p-2">
+        <li class="list-group-item">
+        {{do.day}} | {{do.todo}}
+        <button type="submit" class="btn btn-primary" title="할일을 삭제합니다." >삭제</button>
+        </li>
+        </div>
+    </div>
 {% endfor %}
+</form>
 </ul>
-<a href="{% url 'todo_create' %}" >할일 등록하기</a>
+
+<a href="{% url 'todo_create' %}" class="check" title="할일을 등록합니다.">할일 등록하기</a>
 
 {% endblock %}

@@ -4,4 +4,5 @@ from . import views
 urlpatterns =[
     path('', views.index, name='index'),
     path('todo/create/', views.todo_create, name='todo_create'),
+    path(route="delete/<int:todo_id>", view=views.delete_todo)
 ]

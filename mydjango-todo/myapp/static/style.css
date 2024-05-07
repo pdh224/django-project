@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'WarhavenB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/WarhavenB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+h1{
+    text-align: center;
+    background-color:rgba(137, 43, 226, 0.473) ;
+}
+body{
+    background-color: blanchedalmond;
+    text-align: center;
+    font-family: 'WarhavenB';
+}
+
+.list-group-item{
+    text-align: start;
+    border-width: 2px;
+    border-style: solid;
+    border-color:darkorange;
+}
